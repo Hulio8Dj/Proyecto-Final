@@ -1,0 +1,180 @@
+/* Estilos generales ya existentes */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff !important;
+    margin: 0;
+    padding: 20px;
+}
+
+.container.finalizar-compra-container {
+    padding: 40px;
+    max-width: 1600px;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.659);
+}
+
+h1 {
+    width: auto;
+    margin: 0 auto 20px;
+    max-width: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.659);
+}
+
+.flex-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.resumen-productos, .datos-cliente {
+    flex: 1 1 48%; /* Ajusta la flexibilidad para permitir el ajuste */
+    margin: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.614);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #545454;
+}
+
+.confirmar-compra-btn, .volver-cesta-btn {
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.confirmar-compra-btn {
+    background-color: #28a745;
+}
+
+.confirmar-compra-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.volver-cesta-btn {
+    background-color: #6c757d;
+}
+
+.volver-cesta-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensaje de confirmación */
+.mensaje-confirmacion {
+    background-color: #d4edda;
+    font-size: 25px;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centrar encabezados */
+.resumen-productos h2, .datos-cliente h2, .resumen-productos h3 {
+    text-align: center;
+}
+
+.finalizar-compra-container .form-control#direccion {
+    height: 40px !important; /* Ajusta el valor como prefieras */
+}
+
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    /* Para tabletas */
+    .container.finalizar-compra-container {
+        padding: 20px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .resumen-productos, .datos-cliente {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Para móviles */
+    .container.finalizar-compra-container {
+        padding: 15px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .resumen-productos, .datos-cliente {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .confirmar-compra-btn, .volver-cesta-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+
+    .mensaje-confirmacion {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+

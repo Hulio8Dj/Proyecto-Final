@@ -1,0 +1,191 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el ícono de la cesta */
+.cart-icon {
+    width: 24px; /* Ajusta el tamaño de la imagen del ícono de la cesta */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Barra de navegación */
+.navbar {
+    justify-content: center; /* Centra el contenido de la barra de navegación */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1; /* Asegura que el contenido se centre */
+}
+
+.navbar-brand img {
+    margin: 0 10px; /* Ajusta el margen de las imágenes si es necesario */
+}
+
+/* Estilo del enlace de navegación */
+.navbar-nav .nav-link {
+    color: #555;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center; /* Alinea verticalmente el ícono con el texto */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000;
+}
+
+/* Estilos de los enlaces activos, enfocados y al pasar el ratón */
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000000;
+    background-color: transparent;
+}
+
+/* Alineación de los elementos del menú de navegación a la derecha */
+.navbar-nav.ml-auto {
+    margin-left: auto;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1140px;
+}
+
+/* Estilos para las tarjetas de productos */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.451);
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 30px; /* Espacio inferior entre tarjetas */
+    height: 100%; /* Asegura que todas las tarjetas tengan el mismo tamaño */
+    display: flex;
+    flex-direction: column;
+    max-height: 500px; /* Ajusta la altura máxima de la tarjeta */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.492);
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: contain; /* Ajusta la imagen para que se muestre completa */
+    height: 150px; /* Reduce la altura de la imagen */
+    margin-top: 10px; /* Añade un margen superior para separar la imagen del borde de la tarjeta */
+}
+
+.card-body {
+    padding: 1rem; /* Ajusta el relleno para hacer la tarjeta más grande */
+    flex: 1; /* Permite que el contenido dentro de la tarjeta se expanda */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 0.75rem; /* Mayor margen inferior */
+    color: #333;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1.125rem; /* Tamaño de fuente más grande para el texto */
+    margin-bottom: 0.75rem; /* Mayor margen inferior */
+    flex: 1; /* Permite que el texto se expanda para llenar el espacio */
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Estilos específicos para el botón add-to-cart */
+.btn.add-to-cart {
+    background-color: #304901; /* Color de fondo verde oscuro */
+    border-color: #000000; /* Color del borde negro */
+    color: #fff; /* Color del texto blanco */
+    font-size: 1rem; /* Tamaño de fuente */
+    padding: 0.5rem 1rem; /* Relleno del botón */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+.btn.add-to-cart:hover {
+    background-color: #75b202; /* Color de fondo verde claro al pasar el ratón */
+    border-color: #000000; /* Color del borde al pasar el ratón */
+    color: #fff; /* Color del texto blanco al pasar el ratón */
+}
+
+.btn.add-to-cart:focus, 
+.btn.add-to-cart:active {
+    box-shadow: 0 0 0 0.2rem rgba(222, 255, 38, 0.5); /* Sombra al enfocar o hacer clic */
+}
+
+/* Agrega estos estilos a tu archivo CSS */
+.alert-message {
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #dbdbdb19;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid #ddd;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    margin-bottom: 15px;
+}
+
+.footer-social .social-icon {
+    margin: 0 10px;
+    border: none; /* Elimina cualquier borde */
+    padding: 0; /* Asegura que no haya padding */
+    outline: none; /* Elimina el contorno */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer-social img {
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+

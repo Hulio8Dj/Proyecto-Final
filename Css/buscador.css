@@ -1,0 +1,186 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el botón de abrir el panel de búsqueda */
+.open-search-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #304901;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+}
+
+/* Estilo para el contenedor de búsqueda */
+.search-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 40px auto; /* Centra el contenedor horizontalmente y añade espacio arriba y abajo */
+}
+
+.search-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    transition: right 0.3s ease;
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.473); /* Sombra sutil para un efecto de profundidad */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    overflow-y: auto;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+}
+
+.search-panel.open {
+    right: 0;
+}
+
+/* Estilo para el título */
+.search-container h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #304901; /* Color del texto del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para el botón de retroceso */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px; /* Espacio debajo del botón */
+    background-color: #304901; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente del botón */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.back-button:hover {
+    background-color: #50702d; /* Color de fondo cuando se pasa el ratón sobre el botón */
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Estilo para el formulario de búsqueda */
+.search-container form,
+.search-panel form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos del formulario en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%; /* Asegura que el formulario ocupe el ancho del contenedor */
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.search-container input[type="text"],
+.search-panel input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde del campo de entrada */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio debajo del campo de entrada */
+    width: 100%; /* Ancho completo del campo de entrada dentro del formulario */
+    font-size: 1rem; /* Tamaño de la fuente del campo de entrada */
+}
+
+.search-container button,
+.search-panel button {
+    padding: 10px;
+    background-color: #304901; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+    width: 100%; /* Ancho completo del botón dentro del formulario */
+    font-size: 1rem; /* Tamaño de la fuente del botón */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.search-container button:hover,
+.search-panel button:hover {
+    background-color: #50702d; /* Color de fondo cuando se pasa el ratón sobre el botón */
+}
+
+/* Estilos para los resultados de búsqueda */
+.search-results-container {
+    margin-top: 20px;
+}
+
+.search-results-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.search-results-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-results-container img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-results-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+}

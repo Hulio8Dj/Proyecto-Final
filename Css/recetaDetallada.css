@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #304901;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.408);
+    height: 100px; /* Altura del header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%; /* Asegura que el header ocupe el ancho completo */
+    top: 0; /* Alinea el header en la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    z-index: 1000; /* Asegura que el header esté encima del contenido */
+    background-color: #fff; /* Fondo blanco para el header */
+}
+
+/* Estilos para el botón del header */
+.header-buttons a {
+    background-color: #304901; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.header-buttons a:hover {
+    background-color: #2a3e00; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Ajusta el margin-top del main para separar del header */
+main {
+    margin-top: 120px; /* Ajusta este valor según la altura del header */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del main */
+}
+
+.card {
+    border: 2px solid rgba(0, 0, 0, 0.535);
+    border-radius: 8px;
+    height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra más fuerte en cada tarjeta */
+    margin-bottom: 20px; /* Margen inferior entre tarjetas */
+}
+
+.card-body {
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Alinea en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100px; /* Altura fija para que todas las tarjetas sean del mismo tamaño */
+    text-align: center; /* Centra el texto */
+}
+
+.card-img-top {
+    border: 2px solid rgba(0, 0, 0, 0.535);
+    border-radius: 8px;
+    width: 80%; /* Ajusta la anchura de la imagen para que sea más pequeña */
+    height: auto; /* Mantiene la proporción */
+    max-height: 150px; /* Limita la altura máxima */
+    object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+    object-position: center; /* Centra la imagen */
+    transition: transform 0.3s ease; /* Suaviza la transición */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.688);
+    margin-top: 20px; /* Margen superior a la imagen */
+    margin-left: 35px;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+/* Contenedor verde debajo de las recetas */
+.recipes-container {
+    background-color: #3049018e; /* Color verde */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.71); /* Sombra más fuerte en el contenedor verde */
+}
+
+/* Estilos para el texto en las tarjetas */
+.card-title {
+    margin: 10px 0; /* Margen superior e inferior */
+    text-align: center; /* Centra el texto del título */
+    font-size: 1.25rem; /* Aumenta el tamaño de fuente */
+    color: #2a3e00; /* Cambia el color del texto */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    text-transform: capitalize; /* Convierte la primera letra de cada palabra a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s ease; /* Suaviza la transición de color */
+}
+
+.card-title:hover {
+    color: #4CAF50; /* Cambia el color al pasar el ratón (verde más claro) */
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px; /* Ajusta la altura del logo en pantallas pequeñas */
+    }
+
+    .search-icon {
+        height: 24px; /* Ajusta la altura del icono de búsqueda en pantallas pequeñas */
+    }
+
+    .recipe-image {
+        height: auto; /* Mantiene la proporción de la imagen en pantallas pequeñas */
+        margin: 0; /* Ajuste en móviles para evitar márgenes excesivos */
+    }
+
+    .instructions-list {
+        list-style-type: disc; /* Tipo de viñetas */
+        padding-left: 20px; /* Espaciado a la izquierda para las viñetas */
+        margin: 0; /* Elimina el margen alrededor de la lista */
+        width: 100%; /* Asegura que la lista ocupe el 100% del ancho del contenedor */
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    }
+}

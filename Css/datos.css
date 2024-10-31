@@ -1,0 +1,100 @@
+/* Estilos personalizados para la página "Mis Datos" */
+body {
+    background-color: #f8f9fa; /* Color de fondo claro para contraste */
+    font-family: Arial, sans-serif; /* Fuente general */
+}
+
+h3 {
+    margin: 10px 0; /* Margen superior e inferior reducido para el título */
+    color: #304901; /* Color verde */
+    text-align: center; /* Centra el texto */
+}
+
+.card {
+    border: 1px solid #304901; /* Borde de las tarjetas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.707); /* Sombra más sutil */
+    margin-bottom: 15px; /* Margen inferior reducido */
+}
+
+.card-header {
+    background-color: #304901; /* Fondo del encabezado de la tarjeta */
+    color: white; /* Color del texto del encabezado */
+    border-top-left-radius: 8px; /* Bordes redondeados superiores */
+    border-top-right-radius: 8px; /* Bordes redondeados superiores */
+}
+
+.card-body {
+    background-color: white; /* Fondo blanco para el cuerpo de la tarjeta */
+    padding: 10px; /* Padding reducido en el cuerpo de la tarjeta */
+}
+
+/* Sombra para las tablas */
+.table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.628); /* Sombra de la tabla */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    overflow: hidden; /* Para asegurar que los bordes redondeados funcionen */
+}
+
+.table th {
+    background-color: #304901; /* Fondo del encabezado de la tabla */
+    color: white; /* Color del texto del encabezado */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef; /* Color de fondo para filas impares */
+}
+
+/* Botones personalizados */
+.btn-custom {
+    margin: 5px auto; /* Margen reducido y centrado */
+    background-color: #304901; /* Color de fondo del botón */
+    border-color: #304901; /* Color del borde del botón */
+    width: calc(100% - 20px); /* Botón ocupa el 100% del ancho disponible */
+    max-width: 300px; /* Ancho máximo del botón */
+    padding: 10px; /* Padding del botón */
+}
+
+.btn-custom:hover {
+    background-color: #243a00; /* Color de fondo al pasar el ratón */
+    border-color: #243a00; /* Color del borde al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 10px; /* Menor margen entre tarjetas en tabletas */
+    }
+
+    .btn-custom {
+        width: calc(100% - 20px); /* Mantiene el botón del 100% en móviles */
+        margin: 5px auto; /* Centra el botón */
+    }
+
+    /* Asegura que la tabla se adapte mejor en dispositivos móviles */
+    .table {
+        font-size: 0.9rem; /* Reducir el tamaño de fuente para móviles */
+    }
+
+    .table th, .table td {
+        padding: 0.5rem; /* Reducir el padding en las celdas */
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .card {
+        padding: 5px; /* Reduce el padding de las tarjetas */
+    }
+
+    .btn-custom {
+        max-width: 100%; /* Botones ocupan todo el ancho */
+    }
+
+    .text-center {
+        padding: 0 10px; /* Añade algo de padding horizontal en móviles */
+    }
+}

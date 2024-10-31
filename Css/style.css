@@ -1,0 +1,745 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del Encabezado */
+header {
+    position: fixed; /* Fija el encabezado en la parte superior de la página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px; /* Altura combinada del header-top y header-bottom */
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: #ffffff; /* Color de fondo */
+    z-index: 1000; /* Asegura que el encabezado esté sobre otros contenidos */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilos del Header Top */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo del encabezado */
+}
+
+/* Centrando elementos en header-top */
+.header-top .left, .header-top .right {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .left {
+    margin-right: auto; /* Empuja el contenido hacia la izquierda */
+}
+
+.header-top .right {
+    margin-left: auto; /* Empuja el contenido hacia la derecha */
+}
+
+/* Asegura que el logo y el contenedor de búsqueda estén centrados */
+.header-top .logo,
+.header-top .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/* Asegura que el texto del logo se mantenga en una sola línea */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1; /* Permite que el logo crezca y se alinee al centro */
+    white-space: nowrap; /* Evita que el texto se envuelva en una nueva línea */
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #304901; /* Color aplicado al texto del logo */
+    text-decoration: none; /* Elimina el subrayado */
+    margin: 0 10px;
+    display: inline; /* Asegura que el texto del enlace se mantenga en una sola línea */
+}
+
+.logo-image {
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* Estilo general del botón del menú */
+.btn-link {
+    
+    color: #000000; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 600; /* Negrita */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar el menú por defecto */
+    position: absolute; /* Posición absoluta para que flote sobre otros elementos */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Sombra */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+}
+/*---------------------------------------------------------------------------------------------------------------*/
+
+/* Estilo general para el contenedor */
+.container {
+    border-top: 20px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espaciado interno */
+    max-width: 1200px; /* Ajusta el ancho máximo */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+#searchContainer {
+    display: none; /* Oculta el buscador por defecto */
+    position: absolute; /* Para que no ocupe espacio en el flujo del documento */
+    right: 0; /* Alinea el buscador a la derecha */
+    background-color: #f4f4f4; /* Color de fondo para mejorar la visibilidad */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    padding: 5px; /* Espaciado interno */
+}
+
+
+/* Contenedor de Búsqueda */
+.search-container {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center; /* Centra los elementos dentro del contenedor de búsqueda */
+    position: absolute;
+}
+
+.search-text {
+    font-weight: 500;
+    color: #304901; /* Color aplicado al texto de búsqueda */
+    margin-right: 5px;
+}
+
+.search-icon, .cart-icon {
+    height: 24px;
+}
+
+/* Estilos del Header Bottom */
+.header-bottom {
+    background-color: #ffffff; /* Fondo claro para la barra de navegación inferior */
+    padding: 10px 20px; /* Añade espaciado para el diseño */
+    height: 70px; /* Altura del header-bottom */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido dentro del header-bottom */
+    border-bottom: 2px solid #c3c3c3;
+    margin-top: -35px;
+}
+
+/*NAVEGADOR*/
+
+/* Ajusta el espaciado para la barra de navegación */
+.navbar {
+    padding: 10px 0; /* Espaciado alrededor de la barra de navegación */
+    height: 100%; /* Asegura que la barra de navegación llene la altura del header-bottom */
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 0 10px; /* Añade espaciado para separación */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #304901; /* Mantiene el mismo color en hover */
+    text-decoration: none; /* Asegura que no haya subrayado en hover */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar {
+        justify-content: center; /* Desplaza la navbar a la izquierda */
+        padding: 10px; /* Espaciado alrededor de la barra de navegación */
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Dispone las opciones en fila */
+        margin-left: 10px; /* Alinea las opciones a la derecha del navBar */
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: -15px; /* Espaciado entre los enlaces */
+        padding: 7px 11px; /* Ajusta el padding si es necesario */
+        
+    }
+
+    /* Estilos para el menú desplegable */
+    .dropdown {
+        position: relative; /* Necesario para el menú desplegable */
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente general del menú */
+        
+    }
+    
+
+    .dropdown-menu {
+        position: absolute; /* Asegura que el menú se posicione relativo al botón */
+        top: 100%; /* Coloca el menú justo debajo del botón */
+        left: -50%; /* Coloca el menú a la derecha del botón */
+        margin-left: 10px; /* Añade margen a la izquierda del menú para separación */
+        padding: 5px; /* Reduce el padding general del menú */
+        background-color: #f4f4f4ba;
+        display: flex; /* Oculto por defecto */
+        flex-direction: row; /* Alinear los ítems en fila */
+        z-index: 1000; /* Asegúrate que esté encima de otros elementos */
+        
+    }
+
+    /* Mostrar el menú cuando el botón es clicado */
+    .dropdown.show .dropdown-menu {
+        border: 2px solid rgb(0, 0, 0);
+        background-color: #ececec;
+    }
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/* Enlaces en Header Top */
+.header-top a {
+    color: #304901; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.header-top a:hover,
+.header-top a:focus {
+    color: #304901; /* Color de los enlaces en hover y focus */
+    text-decoration: none; /* Elimina el subrayado en hover y focus */
+}
+
+/* Enlaces de Navbar */
+.navbar-nav .nav-link {
+    color: #304901; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #304901; /* Color de los enlaces en hover y focus */
+    text-decoration: none; /* Elimina el subrayado en hover y focus */
+}
+/*----------------------------------------------------------------------------------------*/
+
+/* Estilo para el menú desplegable de banderas */
+.dropdown-menu {
+    padding: 5px; /* Ajusta el espaciado según sea necesario */
+    background-color: rgba(244, 244, 244, 0.73); /* Color de fondo con opacidad */
+    display: none; /* Oculta el menú por defecto */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para mayor profundidad */  
+    flex-direction: row; /* Alinea los ítems del menú en fila */
+}
+
+/* Estilo para mostrar el menú cuando está activo */
+.dropdown-menu.show {
+    display: flex; /* Muestra el menú desplegable cuando está activo */
+}
+
+/* Estilo para los ítems del menú */
+.dropdown-menu .dropdown-item {
+    display: flex; /* Usa flex para alinear la bandera y el texto en fila */
+    align-items: center; /* Alinea verticalmente los ítems */
+    padding: 5px 10px; /* Espaciado interno de los ítems */
+    cursor: pointer; /* Cambia el cursor para indicar que es clicable */
+    transition: background-color 0.3s; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover para el ítem del menú */
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(200, 200, 200, 0.5); /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para las imágenes de banderas */
+.dropdown-menu .dropdown-item img {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+    transition: transform 0.3s; /* Transición suave para el efecto de escala */
+}
+
+/* Efecto hover para el aumento de la bandera */
+.dropdown-menu .dropdown-item:hover img {
+    transform: scale(1.2); /* Aumenta el tamaño de la bandera al pasar el ratón */
+}
+
+/* Estilo para el texto de los países */
+.dropdown-menu .dropdown-item .pais {
+    transition: font-size 0.3s; /* Transición suave para el cambio de tamaño del texto */
+}
+
+
+/* Ajusta el borde si es necesario */
+.dropdown-menu {
+    border: 2px solid #494949; /* Ajusta el color y grosor del borde según tu diseño */
+}
+
+/* Mostrar el menú cuando el botón es clicado */
+.dropdown.show .dropdown-menu {
+    display: block; /* Mostrar menú cuando está activo */
+}
+/*----------------------------------------------------------------------------------------*/
+
+/* Añadir espaciado en la parte superior del contenido principal para evitar que se oculte detrás del encabezado fijo */
+main {
+    padding-top: 200px; /* Ajusta el espaciado para incluir tanto el header como el header-bottom */
+}
+
+/* Efecto hover para aumentar tamaño de imágenes en main */
+.recipe-link-image {
+    transition: transform 0.3s ease; /* Suaviza la transición del efecto */
+}
+
+.recipe-link-image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .recipe-link-image {
+        width: 80%; /* Ajusta este valor según sea necesario */
+        height: auto; /* Mantiene la proporción original */
+        margin-left: 40px; 
+    }
+
+    main {
+        padding-top: 250px; /* Ajusta el espaciado superior si es necesario para evitar el solapamiento */
+    }
+}
+
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #dbdbdb19;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid #ddd;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    margin-bottom: 15px;
+}
+
+.footer-social .social-icon {
+    margin: 0 10px;
+    border: none; /* Elimina cualquier borde */
+    padding: 0; /* Asegura que no haya padding */
+    outline: none; /* Elimina el contorno */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer-social img {
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+
+.footer-newsletter p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.footer-newsletter .form-control {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.footer-newsletter .btn-primary {
+    border-radius: 20px;
+    background-color: #304901;
+    color: #ffffff;
+    border: none;
+}
+
+.footer-newsletter .btn-primary:hover {
+    background-color: #6ca600;
+}
+
+/* Contenedor de Búsqueda */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título en el contenedor de búsqueda */
+.search-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #304901;
+    margin-bottom: 20px;
+}
+
+/* Formulario de Búsqueda */
+.search-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-left: 50px;
+}
+
+/* Campo de entrada de búsqueda */
+.search-container input[type="text"] {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: #F4F4F4;
+    padding: 15px;
+    border-bottom: 3px solid black;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+/* Botón de búsqueda */
+.search-container button {
+    padding: 15px;
+    background-color: #304901;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #50702d;
+}
+
+/* Resultados de Búsqueda */
+.search-results-container {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-results-container ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.search-results-container li {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en columna */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-results-container img {
+    width: 100px;  /* Ajusta este valor según el tamaño deseado */
+    height: 100px; /* Ajusta este valor según el tamaño deseado */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Esto asegura que las imágenes llenen completamente el contenedor sin distorsionarse */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-results-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.search-result-item {
+    border-bottom: 1px solid #676767; /* Línea divisoria gris clara */
+    padding-bottom: 20px; /* Espacio debajo del contenido */
+    margin-bottom: 20px; /* Espacio entre artículos */
+    padding-top: 20px; /* Espacio encima del contenido para el primer artículo */
+}
+
+.search-result-item:last-child {
+    border-bottom: none; /* Elimina la línea en el último artículo */
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal img {
+    width: 100%; /* Esto asegura que la imagen ocupe el 100% del modal */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-height: 80vh; /* Ajusta para que la imagen no sea más alta que el viewport */
+    object-fit: contain; /* Contiene la imagen dentro del espacio disponible */
+}
+
+@media (max-width: 768px) { /* Ajusta el valor según tu diseño */
+    #sideMenu {
+        display: none; /* Oculta completamente el menú lateral */
+    }
+}
+
+
+/* Estilo para el panel de búsqueda lateral */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: -500%; /* Inicialmente oculto fuera de la pantalla */
+    width: 500px;
+    height: 100%;
+    background-color: #eaeaea;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.459);
+    transition: right 0.5s ease; /* Transición suave al mostrar el panel */
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000; /* Asegura que el panel esté encima de otros elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Añade scroll si el contenido excede el tamaño del panel */
+}
+
+/* Mostrar el panel de búsqueda al aplicar la clase 'open' */
+#sideMenu.open {
+    right: 0;
+}
+
+/* Estilo para el botón de cerrar */
+#closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #304901;
+    font-weight: bold;
+}
+
+.despegable-busqueda {
+    cursor: pointer; /* Cambia el cursor a un puntero para indicar que es clicable */
+    display: flex; /* Usar flex para alinear el texto y la imagen */
+    align-items: center; /* Centrar verticalmente el contenido */
+    background-color: #ffffff; /* Color de fondo del desplegable */
+    padding: 5px 10px; /* Espaciado interno */
+}
+
+.search-icon {
+    width: 20px; /* Ajusta el tamaño del icono de búsqueda */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 5px; /* Espacio entre el texto y la imagen */
+}
+
+
+/* Estilo para el nombre del usuario */
+.user-name {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    color: #000; /* Color negro */
+    font-weight: bold; /* Negrita */
+    margin-right: 10px; /* Espacio a la derecha */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Ajusta los enlaces dentro del header para evitar conflictos */
+.header-top a {
+    color: #304901; /* Color aplicado a otros enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.header-top a:hover,
+.header-top a:focus {
+    color: #304901; /* Color de los enlaces en hover y focus */
+    text-decoration: none; /* Elimina el subrayado en hover y focus */
+}
+
+/* Asegura que no haya subrayado en los enlaces en la cabecera */
+.header-top span.btn-link {
+    color: #000; /* Color negro para el texto */
+    font-weight: bold; /* Negrita opcional para mayor énfasis */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Asegura que no haya subrayado en los enlaces de botones */
+.header-top .btn-link {
+    color: #000; /* Color negro para los enlaces de botones */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.header-top .btn-link:hover,
+.header-top .btn-link:focus {
+    color: #000; /* Color negro en hover y focus */
+    text-decoration: none; /* Elimina el subrayado en hover y focus */
+}
+
+/* Estilo para el mensaje en la sección de newsletter */
+.footer-newsletter .alert-message {
+    font-size: 1.25rem; /* Tamaño de fuente más grande (ajustar según sea necesario) */
+    font-weight: bold;  /* Texto en negrita */
+    color: #304901;     /* Color del texto (ajustar según el diseño) */
+    margin-top: 10px;   /* Espacio superior (ajustar según sea necesario) */
+}
+
+/* Estilo para las imagenes del buscador */
+
+.result-item {
+    width: 100%; 
+    max-width: 1000px; /* Ajusta este valor según sea necesario */
+    margin: 0 auto;
+}
+
+.result-item-image {
+    width: 700px; /* Ajusta según sea necesario */
+    height: 800px; /* Ajusta según sea necesario */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border-radius: 10px; /* Agrega un borde redondeado, opcional */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Añade una sombra, opcional */
+}
+
+.search-results-container img {
+    max-width: 150px; /* Ajusta el tamaño máximo según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para los enlaces de categoría */
+.categoria-link {
+    display: inline-block; /* Hace que el enlace se comporte como un bloque en línea, permitiendo padding y margin */
+    padding: 10px 20px; /* Espaciado interno del enlace */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #304901; /* Color del texto */
+    background-color: #f4f4f4; /* Color de fondo */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto de profundidad */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el fondo y el color del texto */
+}
+
+.categoria-link:hover,
+.categoria-link:focus {
+    background-color: #e0e0e0; /* Color de fondo en hover */
+    color: #304901; /* Color del texto en hover */
+    text-decoration: none; /* Elimina el subrayado en hover */
+    outline: none; /* Elimina el borde de enfoque */
+}
+
+.categoria-link:active {
+    background-color: #d0d0d0; /* Color de fondo en clic */
+}
+
+
+/* Agrega estos estilos a tu archivo CSS */
+.alert-message {
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Cambios para el menú desplegable */
+.dropdown {
+    
+    position: relative; /* Añadir posición relativa para que el menú se posicione correctamente */
+}
+
+/*MENU INICIO*/
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+       
+        position: relative; /* Mantenerlo absoluto para que no afecte el layout */
+        top: 100%; /* Posicionar justo debajo del botón */
+        left: 0; /* Alinear a la izquierda */
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #f4f4f4ba;
+        display: none; /* Oculto por defecto */
+        flex-direction: row; /* Alinear los ítems en columna */
+    }
+}
+
+

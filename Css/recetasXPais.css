@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #304901;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.408);
+    height: 100px; /* Altura del header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%; /* Asegura que el header ocupe el ancho completo */
+    top: 0; /* Alinea el header en la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    z-index: 1000; /* Asegura que el header esté encima del contenido */
+    background-color: #fff; /* Fondo blanco para el header */
+}
+
+/* Ajusta el margin-top del main para separar del header */
+main {
+    margin-top: 120px; /* Ajusta este valor según la altura del header */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del main */
+}
+
+/* Estilos para los encabezados h3 */
+h3 {
+    display: inline-block;
+    font-size: 1.2rem; /* Tamaño de fuente para h3 */
+    margin-bottom: 10px; /* Espacio inferior */
+    padding-bottom: 5px; /* Espacio debajo del texto para el subrayado */
+    border-bottom: 2px solid #304901; /* Color y grosor del subrayado */
+}
+
+
+/* Estilos para los enlaces en los botones del header */
+.nav-buttons a {
+    color: #304901; /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: none; /* Elimina cualquier transición o efecto adicional */
+}
+
+.nav-buttons a:hover {
+    color: #304901; /* Mantiene el mismo color al pasar el ratón */
+    text-decoration: none; /* Asegura que no aparezca el subrayado al pasar el ratón */
+}
+
+/* Estilos para el contenedor de búsqueda */
+.search-container {
+    cursor: pointer;
+    color: #304901; /* Color del texto del contenedor de búsqueda */
+    text-decoration: none; /* Asegura que no haya subrayado */
+}
+
+.search-container:hover {
+    color: #304901; /* Mantiene el mismo color al pasar el ratón */
+}
+
+/* Estilos para el icono de búsqueda */
+.search-icon {
+    color: #304901; /* Color del icono de búsqueda */
+}
+
+/* Estilos para el logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-image {
+    height: 40px; /* Ajusta la altura del logo */
+    margin: 0 10px; /* Espaciado horizontal entre imágenes */
+}
+
+.imagenes, .recipe-image {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 300px; /* Define una altura fija para las imágenes */
+    object-fit: cover; /* Cubre el área del contenedor manteniendo la proporción */
+    object-position: center; /* Centra la imagen dentro del área definida */
+    position: relative; /* Permite el uso de las propiedades top y left */
+    top: 10px; /* Mueve la imagen hacia abajo (ajusta el valor según tu necesidad) */
+    left: -10px; /* Mueve la imagen hacia la izquierda (ajusta el valor según tu necesidad) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.612);
+}
+
+
+/* Estilos para el main */
+main {
+    padding-top: 100px; /* Ajusta este valor para el espacio debajo del header */
+    background-color: #3049018e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.812);
+}
+
+/* Estilos para la sección de contenido */
+.content {
+    margin-top: 20px; /* Espaciado superior para la sección de contenido */
+}
+
+/* Estilos para la lista de instrucciones */
+.instructions-list {
+    list-style-type: disc; /* Tipo de viñetas */
+    padding-left: 20px; /* Espaciado a la izquierda para las viñetas */
+    margin: 0; /* Elimina el margen alrededor de la lista */
+    width: 152%; /* Asegura que la lista ocupe el 100% del ancho del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+.instructions-list li {
+    margin-bottom: 10px; /* Espacio entre los ítems */
+    text-align: justify; /* Justifica el texto para que ocupe todo el ancho del ítem */
+    width: 100%; /* Asegura que cada ítem ocupe el ancho completo del contenedor */
+    box-sizing: border-box;
+}
+
+/* Estilos para la descripción del pie de página */
+.footer-description {
+    margin-top: 20px;
+    font-size: 0.9em; /* Tamaño de fuente menor para la descripción */
+}
+
+/* Estilos para los iconos sociales en el pie de página */
+.footer-social {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px; /* Espaciado horizontal entre iconos */
+}
+
+/* Estilos para la newsletter */
+.footer-newsletter {
+    margin-top: 20px;
+}
+
+/* Estilos para el formulario de la newsletter */
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    width: auto; /* Ajusta el ancho del campo de entrada */
+    margin-right: 10px; /* Espaciado a la derecha del campo de entrada */
+}
+
+/* Estilos base para las recetas */
+.recipe-detail {
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo cuando el ratón pasa por encima */
+.recipe-detail:hover {
+    transform: scale(1.02); /* Aumento del tamaño */
+}
+
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px; /* Ajusta la altura del logo en pantallas pequeñas */
+    }
+
+    .search-icon {
+        height: 24px; /* Ajusta la altura del icono de búsqueda en pantallas pequeñas */
+    }
+
+    .recipe-image, .imagenes {
+        height: 150px; /* Reduce aún más la altura de la imagen en pantallas pequeñas */
+        width: 80%; /* Asegura que la imagen no ocupe todo el ancho del contenedor */
+        margin: 0 auto; /* Centra la imagen horizontalmente en móviles */
+        object-fit: cover; /* Mantiene el contenido ajustado al contenedor */
+        object-position: center; /* Centra la imagen dentro del área */
+        display: block; /* Asegura que la imagen se comporte como un bloque y ocupe su propio espacio */
+        max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+        margin-bottom: 20px;
+    }
+
+    .instructions-list {
+        list-style-type: disc; /* Tipo de viñetas */
+        padding-left: 20px; /* Espaciado a la izquierda para las viñetas */
+        margin: 0; /* Elimina el margen alrededor de la lista */
+        width: 100%; /* Asegura que la lista ocupe el 100% del ancho del contenedor */
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

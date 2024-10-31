@@ -1,0 +1,327 @@
+/* cesta.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff !important;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+/* PANTALLAZO TU CESTA ESTA VACIA*/
+
+.alert {
+    border-radius: 8px; /* Bordes redondeados para un look moderno */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.452); /* Sombra suave */
+    padding: 20px;
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto;
+    border: 2px solid #000000; /* Naranja brillante para destacar */
+    animation: fadeIn 2s ease-in-out; /* Duración de 1 segundo para la animación de entrada */
+}
+
+.alert h1 {
+    margin-top: 0;
+    font-size: 2.4rem;
+    color: #000000; /* Naranja brillante */
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.alert p {
+    font-size: 1.1rem;
+    color: #555; /* Gris medio */
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Azul vibrante */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.621); /* Sombra sutil */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul oscuro en hover */
+    transform: translateY(-3px); /* Elevación en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.642); /* Sombra más profunda */
+}
+
+.btn-primary:active {
+    background-color: #004494; /* Azul más oscuro al hacer clic */
+    transform: translateY(1px); /* Ajuste en la elevación al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.613); /* Sombra más ligera al hacer clic */
+}
+
+/* Animación de entrada para la alerta */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*-------------------------------------------------------------------------------*/
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.546); /* Sombra más ligera */
+    border: 2px solid #304901; /* Borde verde oscuro */
+}
+
+.table th {
+    font-size: 1.1rem;
+    padding: 15px;
+    text-transform: uppercase; /* Mayúsculas en los encabezados */
+    border-bottom: 3px solid #d7d7d7; /* Línea divisoria */
+}
+
+.table td {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333;
+    font-size: 1rem;
+    padding: 15px;
+    border-bottom: 1px solid #545454; /* Línea divisoria */
+    vertical-align: middle;
+    padding: 8px 10px; /* Ajusta el padding para evitar demasiada separación */
+}
+
+.table tr:last-child td {
+    border-bottom: none; /* Quita la línea divisoria en la última fila */
+}
+
+.table tr:hover td {
+    background-color: #e7e7e7; /* Fondo más claro en hover */
+}
+
+/* Asegura que las celdas de la tabla estén alineadas verticalmente en el medio */
+
+.table th, .table td {
+    text-align: center; /* Asegura que el texto en las celdas esté centrado */
+}
+
+.table .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.table .btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.table .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.table .btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.table .btn-danger:hover {
+    background-color: #c82333;
+}
+
+
+#total-cesta {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* Espacio entre los botones y el número */
+    line-height: 1; /* Asegura que el número y los botones estén alineados verticalmente */
+}
+
+.quantity-controls button {
+    flex: 0 0 28px; /* Botones ligeramente más pequeños */
+    margin: 0; /* Asegura que no haya margen adicional */
+    padding: 0; /* Asegura que no haya padding adicional */
+    line-height: 1; /* Alinea el contenido verticalmente */
+}
+
+.quantity-controls span {
+    flex: 1;
+    text-align: center; /* Asegura que el número esté centrado */
+    margin: 0; /* Asegura que no haya margen adicional */
+    padding: 0; /* Asegura que no haya padding adicional */
+    line-height: 1; /* Alinea el contenido verticalmente */
+}
+
+/* Animación de entrada para la imagen */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para la imagen debajo de la tabla */
+.img-cesta {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: 500px; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para un look más moderno */
+    margin-top: 20px; /* Espacio superior para separarla del contenido superior */
+    animation: fadeInImage 2s ease-in-out; /* Aplica la animación de entrada */
+}
+
+/* Botón de finalizar compra */
+.finalizar-compra-boton {
+    background-color: #28a745; /* Verde para indicar acción positiva */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px; /* Separación respecto a elementos superiores */
+    margin-bottom: 20px; /* Separación respecto al siguiente botón */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.691); /* Sombra sutil */
+    border-bottom: 20px;
+}
+
+.finalizar-compra-boton:hover {
+    background-color: #218838; /* Más oscuro en hover */
+    transform: translateY(-3px); /* Elevación en hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.709); /* Sombra más profunda */
+}
+
+.finalizar-compra-boton:active {
+    background-color: #1e7e34; /* Más oscuro al hacer clic */
+    transform: translateY(1px); /* Ajuste en la elevación al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera al hacer clic */
+}
+
+/* Estilos del Pie de Página */
+footer {
+    background-color: #dbdbdb19;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 280px;
+    border-top: 3px solid #ddd;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    margin-bottom: 15px;
+}
+
+.footer-social .social-icon {
+    margin: 0 10px;
+    border: none; /* Elimina cualquier borde */
+    padding: 0; /* Asegura que no haya padding */
+    outline: none; /* Elimina el contorno */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.footer-social img {
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-social img:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: small;
+    }
+
+    .alert h1 {
+        font-size: 1.8rem; /* Reduce aún más el tamaño de la fuente en móviles */
+        text-align: center; /* Centra el texto horizontalmente */
+        margin: 10px 0; /* Reduce los márgenes para optimizar el espacio */
+        word-break: break-word; /* Fuerza la ruptura de palabras largas si es necesario */
+        line-height: 1.2; /* Ajusta el espacio entre líneas para que el título no se vea demasiado separado */
+    }
+
+    .alert {
+        padding: 10px; /* Asegura que no se desborde */
+        max-width: 100%; /* Asegura que la alerta no se salga del ancho de la pantalla */
+    }
+
+    .alert p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        max-width: 100%; /* Asegura que el botón no se salga del contenedor */
+    }
+
+    .table {
+        width: 100%; /* Asegura que la tabla no se desborde */
+        overflow-x: auto; /* Permite el scroll horizontal si es necesario */
+    }
+
+    .table th, .table td {
+        font-size: 0.9rem;
+        padding: 8px;
+        word-wrap: break-word; /* Ajusta para que el texto dentro de la tabla no se desborde */
+    }
+
+    .quantity-controls {
+        display: flex; /* Asegura que los controles se mantengan en una sola fila */
+        gap: 1px; /* Reduce el espacio entre los botones y el número */
+    }
+
+    .quantity-controls button {
+        flex: 0 0 28px; /* Botones ligeramente más pequeños para mantener la fila en pantallas pequeñas */
+    }
+
+    .img-cesta {
+        margin-top: 10px; /* Ajusta el margen en pantallas más pequeñas */
+    }
+}
+
+

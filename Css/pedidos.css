@@ -1,0 +1,70 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo claro */
+    font-family: Arial, sans-serif; /* Fuente general */
+}
+
+h3 {
+    color: #304901; /* Color verde para el encabezado */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.table {
+    background-color: white; /* Fondo blanco para la tabla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.654); /* Sombra de la tabla */
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+    overflow: hidden; /* Para asegurar que los bordes redondeados funcionen */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e9ecef; /* Color de fondo para filas impares */
+}
+
+.table thead {
+    background-color: #304901 !important; /* Fondo del encabezado de la tabla */
+    color: white !important; /* Color del texto del encabezado */
+}
+
+.badge {
+    font-size: 0.9rem; /* Tamaño de fuente para las etiquetas */
+}
+
+/* Botones personalizados */
+.btn-custom {
+    margin-top: 15px; /* Margen superior para el botón */
+    background-color: #304901; /* Color de fondo del botón */
+    border-color: #304901; /* Color del borde del botón */
+}
+
+.btn-custom:hover {
+    background-color: #243a00; /* Color de fondo al pasar el ratón */
+    border-color: #243a00; /* Color del borde al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem; /* Reducir el tamaño de fuente para móviles */
+    }
+
+    .table th, .table td {
+        padding: 0.5rem; /* Reducir el padding en las celdas */
+    }
+
+    .table td.text-center {
+        text-align: center; /* Centrar el texto en las celdas */
+    }
+}
+
+@media (max-width: 576px) {
+    h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .text-center {
+        padding: 0 10px; /* Añade algo de padding horizontal en móviles */
+    }
+}
+
+
+

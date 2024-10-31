@@ -1,0 +1,164 @@
+/* General Body Styling */
+body {
+    font-family: 'Charm', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    width: 100%; /* Full width */
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #dbdbdb19; /* Optional background color */
+    padding: 20px 0; /* Increased padding to make header taller */
+    position: fixed; /* Fixed position to keep header on top */
+    top: 0; /* Stick to the top */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header .nav-buttons {
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Add padding to ensure spacing */
+}
+
+header .nav-buttons a {
+    color: #304901; /* Color applied to "Cuenta" and "Cesta" */
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: none; /* Remove transition effect */
+}
+
+header .nav-buttons a:hover {
+    color: #304901; /* Keep color the same on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1; /* Allows logo to grow and center align */
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+header .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #304901; /* Color applied to "RISAS & SABORES" */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header .logo img {
+    height: 50px; /* Adjusted to be in proportion with the taller header */
+    margin: 0 10px;
+}
+
+header .search-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+header .search-text {
+    font-weight: 500;
+    color: #304901; /* Color applied to the search text */
+    margin-right: 5px;
+}
+
+header .search-icon {
+    height: 24px;
+}
+
+/* Main Content Styling */
+main {
+    padding: 120px 15px 15px; /* Increased top padding to ensure form is visible below the fixed header */
+    min-height: 100vh; /* Ensure main takes up full height */
+}
+
+main .formulario-recetas {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Restrict the maximum width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+main .formulario-recetas h2 {
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    color: #304901; /* Color applied to the form title */
+    text-align: center; /* Center the title */
+}
+
+main .formulario-recetas .form-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align form labels and inputs to the left */
+}
+
+main .formulario-recetas .form-control {
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 8px 12px; /* Adjust padding for smaller size */
+    font-size: 0.875rem; /* Smaller font size */
+    color: #304901; /* Color applied to the input text */
+}
+
+main .formulario-recetas .btn-primary {
+    background-color: #304901;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.875rem; /* Smaller font size */
+    color: #ffffff; /* Text color inside the button */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Space between buttons */
+}
+
+main .formulario-recetas .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 0.875rem; /* Smaller font size */
+    color: #ffffff; /* Text color inside the button */
+    width: 100%; /* Full width */
+}
+
+main .formulario-recetas .btn-primary:hover {
+    background-color: #2b3a1e;
+}
+
+main .formulario-recetas .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+        flex-direction: column;
+    }
+
+    header .logo img {
+        display: none;
+    }
+
+    header .search-container {
+        margin-top: 10px;
+    }
+}
